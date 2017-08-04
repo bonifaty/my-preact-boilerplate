@@ -39,7 +39,7 @@ module.exports = (env) => ({
             }
         ]
     },
-    plugins: env.prod ? [
+    plugins: env && env.prod ? [
         new UglifyJSPlugin()
     ] : [],
     devServer: {
