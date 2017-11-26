@@ -1,16 +1,14 @@
-var webpack = require('webpack');
-var path = require('path');
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+let UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env) => ({
     entry: {
         'app': [
-            './source/app.js'
-        ]
+            './source/app.js',
+        ],
     },
     output: {
-        path: __dirname + "/docs",
-        filename: "[name].js"
+        path: __dirname + '/docs',
+        filename: '[name].js',
     },
     module: {
         rules: [
@@ -20,32 +18,32 @@ module.exports = (env) => ({
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env']
-                    }
-                }
+                        presets: ['env'],
+                    },
+                },
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.styl$/i,
                 use: [
                     'style-loader',
                     'css-loader',
-                    'stylus-loader'
-                ]
+                    'stylus-loader',
+                ],
 
-            }
-        ]
+            },
+        ],
     },
     plugins: env && env.prod ? [
-        new UglifyJSPlugin()
+        new UglifyJSPlugin(),
     ] : [],
     devServer: {
         contentBase: './docs',
         host: '0.0.0.0',
-        port: 8080
+        port: 8080,
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
 });

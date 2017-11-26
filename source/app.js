@@ -1,8 +1,9 @@
-import { h, render } from 'preact'
-import MyComponent from './components/my-component/index'
+import {h, render} from 'preact';
+import MyComponent from './components/my-component/index';
 
-require('file-loader?name=[name].[ext]!./index.html')
-require('reset-css/reset.css')
+// eslint-disable-next-line import/no-webpack-loader-syntax
+require('file-loader?name=[name].[ext]!./index.html');
+require('reset-css/reset.css');
 
 render(
   (
@@ -10,4 +11,4 @@ render(
       <MyComponent />
     </div>
   ), document.body
-)
+);
