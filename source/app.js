@@ -1,12 +1,13 @@
-import { h, render } from 'preact';
+import { h, render } from 'preact'
+import MyComponent from './components/my-component/index'
 
-require('file-loader?name=[name].[ext]!./index.html');
-require('reset-css/reset.css');
+require('file-loader?name=[name].[ext]!./index.html')
+require('reset-css/reset.css')
 
-import MyComponent from './components/my-component';
-
-render((
+render(
+  (
     <div>
-        <MyComponent />
+      <MyComponent />
     </div>
-), document.body);
+  ), document.body
+)
