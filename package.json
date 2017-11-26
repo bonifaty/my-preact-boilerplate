@@ -8,33 +8,28 @@
     "build": "rm -rf ./docs && webpack --env.prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bonifaty/my-preact-boilerplate.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/bonifaty/my-preact-boilerplate.git",
+  "author": "bonifaty <andrew.abramov00@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bonifaty/my-preact-boilerplate/issues"
   },
   "homepage": "https://github.com/bonifaty/my-preact-boilerplate#readme",
-  "dependencies": {
-    "b_": "^1.3.3",
-    "css-loader": "^0.28.4",
-    "file-loader": "^0.11.2",
-    "preact": "^8.2.1",
-    "reset-css": "^2.2.0",
-    "style-loader": "^0.18.2",
+  "devDependencies": {
+    "b_": "^1.3.4",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "preact": "^8.2.6",
+    "reset-css": "^2.2.1",
+    "style-loader": "^0.19.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
-    "webpack-dev-server": "^2.5.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
+    "webpack-dev-server": "^2.9.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^3.3.0"
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.8.1"
   }
 }
